@@ -9,12 +9,22 @@ public class stringReversal {
     try {
         String str = bufferedReader.readLine();
         String rev = "";
+
         for(int i=str.length()-1; i>=0;i--){
             rev += str.charAt(i);
         }
         System.out.println(rev);
+        System.out.println(reverseRecurse(str)); //using recursion
     }catch(Exception e){
         System.out.println(e);
     }
     }
+    public static String reverseRecurse(String str){
+        if(str.length() == 0)
+        return "";
+
+        return str.charAt(str.length()-1)+ reverseRecurse(str.substring(0, str.length()-1));
+    }
 }
+
+
