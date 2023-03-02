@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class stringReversal {
+public class stringReverseIteration {
     public static void main(String args[]) throws IOException {
 
     InputStreamReader inputStreamReader = new InputStreamReader(System.in);
@@ -14,10 +14,12 @@ public class stringReversal {
             rev += str.charAt(i);
         }
         System.out.println(rev);
+
         System.out.println(reverseRecurse(str)); //using recursion
-    }catch(Exception e){
+        }
+    catch(Exception e){
         System.out.println(e);
-    }
+        }
     }
     public static String reverseRecurse(String str){
         if(str.length() == 0)
